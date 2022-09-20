@@ -2,16 +2,16 @@
 export const productos=[
     {
         id:1,
-        imagen:"https://www.bbc.com/mundo/noticias-48676663",
+        imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         titulo:"Seminario Educación del Cachorro",
         categoria:"Seminarios",
-        descripcion:"agregar temas, dias, horarios etc",
+        descripcion:"Se dicta el día Sabado 24 de Septiembre 20hs (ARG). Modalidad online. Los temas son: socialización en edad temprana, hábitos higienicos, uso de caja transportadora, primeros paseos, cómo jugar, y enseñar el `NO`",
         precio:1000,
         stock:5,
     },
     {
         id:2,
-        imagen:"../assets/patita.jpg",
+        imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         titulo:"Seminario Miedos y Fobias",
         categoria:"Seminarios",
         descripcion:"agregar temas, dias, horarios etc",
@@ -21,7 +21,7 @@ export const productos=[
     },
     {
         id:3,
-        imagen:"agregar url",
+        imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         titulo:"Seminario Conductas Agresivas",
         categoria:"Seminarios",
         descripcion:"agregar temas, dias, horarios etc",
@@ -31,7 +31,7 @@ export const productos=[
     },
     {
         id:4,
-        imagen:"agregar url",
+        imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         titulo:"Seminario Ansiedad",
         categoria:"Seminarios",
         descripcion:"agregar temas, dias, horarios etc",
@@ -41,7 +41,7 @@ export const productos=[
     },
     {
         id:5,
-        imagen:"agregar url",
+        imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         titulo:"Seminario Educación del Cachorro",
         categoria:"Seminarios",
         descripcion:"agregar temas, dias, horarios etc",
