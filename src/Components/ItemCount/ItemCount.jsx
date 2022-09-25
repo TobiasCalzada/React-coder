@@ -27,11 +27,12 @@ const ItemCount = ({stock,onAdd}) =>{
 
     return (
         <div class="contenedorContador">
-            <h1>contador</h1>
-            <h2>{contador}</h2>
-            <button onClick={agregar}>+</button>
-            <button onClick={quitar}>-</button>
-            <button onClick={devolver}>Agregar al carrito</button>
+            <h4>Cantidad: {contador}</h4>
+            <div class="botonesContador">
+                <button onClick={agregar}>+</button>
+                <button onClick={devolver}>Agregar al carrito</button>
+                <button onClick={quitar}>-</button>
+            </div>
         </div>
    
     );

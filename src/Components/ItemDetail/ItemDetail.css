@@ -9,4 +9,6 @@
     padding: 10px;
     text-align:center;
     font-size: 22px;
+    height: 600px;
+    width: fit-content;
 }

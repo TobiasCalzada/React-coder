@@ -1,17 +1,19 @@
 import React from "react";
 import logo from "../../assets/logo1.jpg"
 import { CartWidget } from "../CartWidget/CartWidget";
+import {Link} from "react-router-dom";
 import "./Navbar.css"
 
 const Navbar = () =>{
     return (
         <header>
             <img src={logo} alt="logo" />
-            <h1>Adiestramiento Canino Jirok</h1>
+            <Link to="/"><h1>Adiestramiento Canino Jirok</h1></Link>
+            
             <nav>
-                <a href="">Cursos</a>
-                <a href="">Seminarios</a>
-                <a href="">Contenido de la Escuela</a>
+                <Link to="/categoria/cursos">Cursos</Link>
+                <Link to="/categoria/seminarios">Seminarios</Link>
+                <Link to="/categoria/accesorios">Accesorios</Link> 
                 <CartWidget/>
             </nav>
         </header>

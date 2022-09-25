@@ -4,21 +4,28 @@ import { productos } from "../../utils/productos";
 import { customFetch } from "../../utils/customFetch";
 import { useState, useEffect } from "react";
 import {ItemList} from "../ItemList/ItemList"
+import {useParams} from "react-router-dom";
 
 
 const ItemListContainer = ({greeting}) =>{
-
+    const {categoria}= useParams();
     const [listaProd,setListaProd]= useState([]);
     const [loading,setLoading]= useState(true);
 
-    useEffect(() => {
+    useEffect(() => { 
         setLoading(true)
         customFetch(productos)
         .then(res=>{
-          setLoading(false)
-          setListaProd(res)
+          if (categoria){
+            setLoading(false)
+            setListaProd(res.filter(prod=>prod.categoria===categoria))
+          }else{
+            setLoading(false) //el home
+            setListaProd(res)
+          }
+
         })
-    },[])
+    },[categoria])
 
     return (
         <>
