@@ -1,10 +1,13 @@
 import React from "react";
 import {AiOutlineShoppingCart } from 'react-icons/ai';
+import {Link} from "react-router-dom";
 
 const CartWidget = () =>{
     return (
         <>
-           <AiOutlineShoppingCart/>
+          <Link to="/cart">
+            <AiOutlineShoppingCart/>
+          </Link>
         </>
    
     );

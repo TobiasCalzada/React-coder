@@ -9,28 +9,23 @@ const ItemCount = ({stock,onAdd}) =>{
     const agregar =()=>{
         if (contador<stock){
             setContador(contador+1);
-
         }
-       
     }
     const quitar =()=>{
         if (contador>1){
             setContador(contador-1)
-
         }
     }
     const devolver =()=>{
         onAdd(contador)
-
     }
-    
 
     return (
         <div class="contenedorContador">
             <h4>Cantidad: {contador}</h4>
             <div class="botonesContador">
                 <button onClick={agregar}>+</button>
-                <button onClick={devolver}>Agregar al carrito</button>
+                <button onClick={onAdd}>Agregar al carrito</button>
                 <button onClick={quitar}>-</button>
             </div>
         </div>
