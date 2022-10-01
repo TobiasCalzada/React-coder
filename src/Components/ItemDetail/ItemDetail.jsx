@@ -2,14 +2,18 @@ import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../CartContext/CartContext";
 
 
 const ItemDetail = ({listaProd})=>{
 
     const [agregado,setAgregado]=useState(false)
+    const {addItem}=useContext(Context); // hago una desestructuracion de las fc que puede usar para agarrar solo al additem ya que el itemdetail no necesita usar otra
 
     const onAdd= (contador)=>{
-       setAgregado(true)
+       setAgregado(true);
+       addItem(listaProd,contador)
     }
 
     return (
