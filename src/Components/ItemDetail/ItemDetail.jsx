@@ -17,12 +17,12 @@ const ItemDetail = ({listaProd})=>{
     }
 
     return (
-        <div class="producto">
+        <div className="producto">
             <h1>{listaProd.producto}</h1>
             <img src={listaProd.imagen}/>
             <p>{listaProd.descripcion}</p>
             <h3>${listaProd.precio}</h3>
-            { !agregado ? <ItemCount stock={10} onAdd={onAdd}/> :  <Link to="/cart"><button>Ver Carrito</button></Link> }
+            { !agregado ? <ItemCount stock={10} onAdd={onAdd}/> :  <><Link to="/cart"><button>Ver Carrito</button></Link> <Link to="/"><button>Seguir comprando</button></Link></>}
         </div>
 
     )
