@@ -4,6 +4,8 @@ import { productos } from "../../utils/productos";
 import { customFetch } from "../../utils/customFetch";
 import { useState, useEffect } from "react";
 import {ItemList} from "../ItemList/ItemList"
+import {db} from "../../firebase/firebase"
+import {getDocs, collection, query, where} from "firebase/firestore"
 
 import {useParams} from "react-router-dom";
 
@@ -11,8 +13,42 @@ const ItemListContainer = ({greeting}) =>{
     const {categoria}= useParams();
     const [listaProd,setListaProd]= useState([]);
     const [loading,setLoading]= useState(true);
+    
 
     useEffect(() => { 
+      setLoading(true)
+        const coleccionProductos= collection(db,"productos")
+        let q= coleccionProductos;
+        if (categoria==="cursos"){
+          q= query(coleccionProductos,where("categoria","==","cursos")) 
+          console.log(categoria)
+        }
+        else if (categoria==="seminarios"){
+          q= query(coleccionProductos,where("categoria","==","seminarios")) 
+          console.log(categoria)
+        }
+        else if(categoria==="accesorios"){
+          q= query(coleccionProductos,where("categoria","==","accesorios")) 
+          console.log(categoria)
+        }
+        getDocs(q)
+        .then((data)=>{
+          const arrayProductos= data.docs.map((producto)=>{
+            return {
+              ...producto.data(),
+              id:producto.id
+            }
+          })
+          setListaProd(arrayProductos)
+          console.log(arrayProductos)
+        })
+        .finally(()=>{
+          setLoading(false)
+        })
+    },[categoria])
+
+
+    /*useEffect(() => { 
         setLoading(true)
         customFetch(productos)
         .then(res=>{
@@ -25,7 +61,7 @@ const ItemListContainer = ({greeting}) =>{
           }
 
         })
-    },[categoria])
+    },[categoria])*/
 
     return (
       <div>
