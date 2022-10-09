@@ -37,9 +37,7 @@ const ItemDetailContainer = () =>{
     },[])*/
 
     return (
-
         <>
-
             {loading ? <p>cargando...</p> : <ItemDetail listaProd={listaProd}/>}
         </>
    
