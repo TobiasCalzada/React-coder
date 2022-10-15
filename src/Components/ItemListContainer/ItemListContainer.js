@@ -21,15 +21,12 @@ const ItemListContainer = ({greeting}) =>{
         let q= coleccionProductos;
         if (categoria==="cursos"){
           q= query(coleccionProductos,where("categoria","==","cursos")) 
-          console.log(categoria)
         }
         else if (categoria==="seminarios"){
           q= query(coleccionProductos,where("categoria","==","seminarios")) 
-          console.log(categoria)
         }
         else if(categoria==="accesorios"){
           q= query(coleccionProductos,where("categoria","==","accesorios")) 
-          console.log(categoria)
         }
         getDocs(q)
         .then((data)=>{
@@ -40,7 +37,6 @@ const ItemListContainer = ({greeting}) =>{
             }
           })
           setListaProd(arrayProductos)
-          console.log(arrayProductos)
         })
         .finally(()=>{
           setLoading(false)

@@ -3,57 +3,14 @@ import {Link} from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../CartContext/CartContext";
 import { User } from "../User/User";
-import {db} from "../../firebase/firebase"
-import {addDoc, collection, serverTimestamp, doc,updateDoc} from "firebase/firestore"
 import { useState } from "react";
 
-const Cart = () =>{ // recibir por props la data del usr
+const Cart = () =>{ 
 
     const {cart, precioTotal, removeItem,clear}=useContext(Context); 
-
-    const [muestraID,setMuestraID]=useState(false);
-    const [form,setForm]=useState(false);
-    const [idCompra,setIdCompra]=useState("");
-
-    const [nombre,setNombre]= useState("");
-    const [apellido,setApellido]= useState("");
-    const [email,setEmail]= useState("");
-    const [datosComprador,setDatosComprador]= useState({});
-
-    const handlerName = (e)=>{
-        setNombre(e.target.value)
-    }
-    const handlerApellido = (e)=>{
-        setApellido(e.target.value)
-    }
-    const handlerEmail = (e)=>{
-        setEmail(e.target.value)
-    }     
-    const handlerClick = ()=>{
-        setDatosComprador({nombre,apellido,email})
-        const coleccionVentas=collection(db,"ventas");
-        addDoc(coleccionVentas,{
-            nombre: datosComprador.nombre,
-            apellido: datosComprador.apellido,
-            email: datosComprador.email,
-            items: cart,
-            fecha: serverTimestamp(),
-            precioTotal,
-        })
-        .then(rdo=>{
-            setIdCompra(rdo.id);
-            clear();
-            setForm(false)
-            setMuestraID(true);
-            setTimeout(()=>{
-                setMuestraID(false);
-            },5000)
-        })
-    }
-
-
+    const [form, setForm]= useState(false);
     const finalizarCompra = ()=>{
-        setForm(true)
+        setForm(true);
     }
 
     return (
@@ -80,17 +37,7 @@ const Cart = () =>{ // recibir por props la data del usr
 
             </>
             }
-
-           {form&& <>
-                <input type="text" placeholder="Nombre" onChange={handlerName} />
-                <input type="text" placeholder="Apellido" onChange={handlerApellido} />
-                <input type="email" placeholder="E-mail" onChange={handlerEmail} />
-                <button onClick={handlerClick}>Agregar</button>
-            </>}
-
-            {muestraID&& <>
-                <h2>Su id de compra es: {idCompra} </h2>
-            </>}
+            {form&&<User/>}
 
 
         </>
