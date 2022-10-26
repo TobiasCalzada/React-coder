@@ -1,8 +1,6 @@
 import React, {useState} from "react" 
 import "./ItemCount.css";
 
-
-
 const ItemCount = ({stock,onAdd}) =>{
 
     const [contador,setContador]= useState(1);

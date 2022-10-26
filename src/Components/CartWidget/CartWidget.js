@@ -7,8 +7,6 @@ import { Context } from "../CartContext/CartContext";
 const CartWidget = () =>{
   const {cantElem}=useContext(Context);
 
-
-
     return (
         <>
           <Link to="/cart">

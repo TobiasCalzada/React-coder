@@ -1,7 +1,6 @@
 import "./Item.css";
 import {Link} from "react-router-dom";
 
-
 const Item =({producto})=>{
 
     return(
@@ -11,11 +10,9 @@ const Item =({producto})=>{
                 <img src={producto.imagen} alt="" />
                 <h3>${producto.precio}</h3>
                 <Link to={`producto/${producto.id}`}>Ver más</Link>
-              
             </div>
-           
         </>
     )
-
 }
+
 export {Item}

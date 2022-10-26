@@ -9,7 +9,6 @@ const Navbar = () =>{
         <header>
             <img src={logo} alt="logo" />
             <Link to="/"><h1>Adiestramiento Canino Jirok</h1></Link>
-            
             <nav>
                 <Link to="/categoria/cursos">Cursos</Link>
                 <Link to="/categoria/seminarios">Seminarios</Link>
@@ -17,7 +16,6 @@ const Navbar = () =>{
                 <CartWidget/>
             </nav>
         </header>
-   
     );
   }
   

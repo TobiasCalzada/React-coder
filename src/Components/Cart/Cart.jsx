@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Context } from "../CartContext/CartContext";
 import { User } from "../User/User";
 import { useState } from "react";
+import "./Cart.css";
 
 const Cart = () =>{ 
 
@@ -12,15 +13,14 @@ const Cart = () =>{
     const finalizarCompra = ()=>{
         setForm(true);
     }
-
+    
     return (
-
         <>
             <h3>Carrito</h3>
             {cart.map(producto=>
                 <div key= {producto.id} className="producto">
                     <h1>{producto.producto}</h1>
-                    <img src={producto.imagen}/>
+                    <img src={producto.imagen} alt="imagen del producto"/>
                     <p>{producto.descripcion}</p>
                     <h3>Precio unitario: ${producto.precio}</h3>
                     <p>Cantidad: {producto.cantidad}</p>
@@ -31,17 +31,16 @@ const Cart = () =>{
                 )}
             {cart.length===0 ?  <> <p>No se han agregado productos al carrito</p> <Link to="/">Ver productos</Link> </> : 
             <>
-                <p>Precio total: $ {precioTotal} </p>
-                <button onClick={()=>clear()}>Vaciar carrito</button>
-                <button onClick={finalizarCompra}>finalizar Compra</button>
-
+                {form&&<User/>} 
+                <div className="infoCarrito">
+                    <h3>Precio total: $ {precioTotal} </h3>
+                    <button className="botonCarrito" onClick={()=>clear()}>Vaciar carrito</button>
+                    <button className="botonCarrito" onClick={finalizarCompra}>Finalizar Compra</button>
+                </div>
+                
             </>
             }
-            {form&&<User/>}
-
-
         </>
-   
     );
   } 
   

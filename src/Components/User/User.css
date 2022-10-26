@@ -1,0 +1,18 @@
+.formulario{
+    background-color: aquamarine;
+    display: flex;
+}
+.inputs,.botonForm{
+    margin: 20px;
+    width: 300px;
+    height: 20px;
+}
+
+.botonForm{
+    justify-self: center;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+}
