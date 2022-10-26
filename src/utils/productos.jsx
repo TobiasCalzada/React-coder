@@ -2,7 +2,7 @@
 export const productos=[
     {
         id:1,
-        imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
+        imagen:"../assets/foto1",
         producto:"Seminario Educación del Cachorro",
         categoria:"seminarios",
         descripcion:"Se dicta el día Sabado 24 de Septiembre 20hs (ARG). Modalidad online. Los temas son: socialización en edad temprana, hábitos higienicos, uso de caja transportadora, primeros paseos, cómo jugar, y enseñar el `NO`",
@@ -36,7 +36,7 @@ export const productos=[
         categoria:"seminarios",
         descripcion:"Se dicta el día Sabado 1 de Octubre 17hs (ARG). Modalidad online.  Los temas son: Identificación, ténicas y tratamiento para la rehabilitación y seguimiento de la ansiedad en perros",
         precio:15000,
-        stock:20,
+        stock:17,
 
     },
     {
@@ -54,8 +54,8 @@ export const productos=[
         imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         producto:"Curso Búsqueda y Rescate",
         categoria:"cursos",
-        descripcion:"Se dicta el día Sabado 1 de Octubre 17hs (ARG). Modalidad online.  Los temas son: ...",
-        precio:15000,
+        descripcion:"Se dicta el día 12 y 13 de Diciembre 13hs (ARG). Modalidad presencial.  Se basa en la localizacion de personas desaparecidas, en distintas areas terremotos, grandes areas y localizacion de ahogados con perros de cadaver.",
+        precio:110000,
         stock:20,
 
     },
@@ -64,7 +64,7 @@ export const productos=[
         imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
         producto:"Curso Protección Civil",
         categoria:"cursos",
-        descripcion:"Se dicta el día Sabado 1 de Octubre 17hs (ARG). Modalidad online.  Los temas son: ...",
+        descripcion:"Se dicta el día Sabado 1 de Octubre 17hs (ARG). Modalidad online.  Se basa en aprender las tècnicas para adiestrar perros para el cuidado del amo, del hogar, de un recurso, etc.",
         precio:1000,
         stock:5,
 
@@ -72,9 +72,9 @@ export const productos=[
     {
         id:8,
         imagen:"https://cdn-icons-png.flaticon.com/256/6028/6028480.png",
-        producto:"Correa 5 metros",
+        producto:"Correa 10 metros",
         categoria:"accesorios",
-        descripcion:"Correa muy útil para...",
+        descripcion:"Correa muy útil para paseos urbanos",
         precio:4500,
         stock:50,
 

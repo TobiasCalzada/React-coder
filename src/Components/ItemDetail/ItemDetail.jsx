@@ -6,6 +6,8 @@ import { useContext } from "react";
 import { Context } from "../CartContext/CartContext";
 
 
+
+
 const ItemDetail = ({listaProd})=>{
 
     const [agregado,setAgregado]=useState(false)
@@ -16,13 +18,15 @@ const ItemDetail = ({listaProd})=>{
        addItem(listaProd,contador)
     }
 
+
+
     return (
         <div className="producto">
             <h1>{listaProd.producto}</h1>
             <img src={listaProd.imagen}/>
             <p>{listaProd.descripcion}</p>
             <h3>${listaProd.precio}</h3>
-            { !agregado ? <ItemCount stock={10} onAdd={onAdd}/> :  <><Link to="/cart"><button>Ver Carrito</button></Link> <Link to="/"><button>Seguir comprando</button></Link></>}
+            { !agregado ? <ItemCount stock={listaProd.stock} onAdd={onAdd}/> :  <><Link to="/cart"><button>Ver Carrito</button></Link> <Link to="/"><button>Seguir comprando</button></Link></>}
         </div>
 
     )

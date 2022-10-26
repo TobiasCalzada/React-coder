@@ -3,6 +3,7 @@ import { Context } from "../CartContext/CartContext";
 import {db} from "../../firebase/firebase";
 import {addDoc, collection, serverTimestamp, doc,updateDoc} from "firebase/firestore";
 import {Fragment,useState,useContext} from "react";
+import {getDocs} from "firebase/firestore"
 
 export const User = () =>{
 
@@ -15,11 +16,25 @@ export const User = () =>{
         email:"",
     });
 
+    const [compararStock,setCompararStock]=useState([]);
+
     const handlerOnChange = (e)=>{
         setDatosComprador({...datosComprador, [e.target.name]:e.target.value})
     }
    
     const enviarDatos = (e)=>{
+      /* const coleccionProductos= collection(db,"productos")
+        getDocs(coleccionProductos)
+        .then((data)=>{
+          const arrayProductos= data.docs.map((producto)=>{
+           return{
+            id:producto.id,
+            ...producto.data().stock};
+            })
+            setCompararStock(arrayProductos)
+          });
+          compararStock.map((producto) =>{console.log(producto.stock);console.log(producto.id)} )
+*/
         e.preventDefault();
         const coleccionVentas=collection(db,"ventas");
         addDoc(coleccionVentas,{
@@ -31,12 +46,22 @@ export const User = () =>{
             precioTotal,
         })
         .then(rdo=>{
+            cart.forEach(producto=>{
+                actualizarStock(producto)
+            });
             setIdCompra(rdo.id);
             clear();
             mostrarId(true)
 
         })
     }
+
+    const actualizarStock=(producto)=>{
+        const updateStock= doc (db,"productos",producto.id);
+        updateDoc(updateStock,{stock:(producto.stock-producto.cantidad)});
+    }
+
+
 
     return (
 
