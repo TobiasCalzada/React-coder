@@ -42,7 +42,7 @@ export const User = () =>{
 
             setTimeout(()=>{
                 clear()
-            },5000)
+            },10000)
             
         })
     }
@@ -55,8 +55,14 @@ export const User = () =>{
     return (
 
         <> 
-        {id&&<><h2> Su código de compra es: {idCompra} </h2><h2> Guardelo por si necesita hacer un reclamo </h2><h3>Muchas gracias por su compra!</h3></>}
-        
+        {id&&
+            <>
+                <h2> Su código de compra es: {idCompra}</h2>
+                <h2> Guardelo por si necesita hacer un reclamo </h2>
+                <h3>Muchas gracias por su compra!</h3>
+                <h3>En 10 segundos esta página se restaurará...</h3>
+            </>
+        }
 
         {!id&&<Fragment> 
             <form className="formulario" onSubmit={enviarDatos}>
