@@ -12,6 +12,10 @@
     justify-self: center;
 }
 
+.advertenciaRoja{
+    color: red;
+}
+
 button{
     width: 200px;
     height: 40px;

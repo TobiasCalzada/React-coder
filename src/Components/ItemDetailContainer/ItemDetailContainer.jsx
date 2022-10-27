@@ -19,6 +19,9 @@ const ItemDetailContainer = () =>{
           .then((rdo)=>{
             setListaProd({id:rdo.id,...rdo.data()})
         })
+        .catch(()=>{
+          console.log("Firebase no está funcionando")
+        })
 
           .finally(()=>{
             setLoading(false)

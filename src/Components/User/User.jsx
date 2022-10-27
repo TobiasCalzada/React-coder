@@ -60,7 +60,7 @@ export const User = () =>{
                 <h2> Su código de compra es: {idCompra}</h2>
                 <h2> Guardelo por si necesita hacer un reclamo </h2>
                 <h3>Muchas gracias por su compra!</h3>
-                <h3>En 10 segundos esta página se restaurará...</h3>
+                <h3 className="advertenciaRoja">En 10 segundos esta página se restaurará...</h3>
             </>
         }
 

@@ -34,6 +34,9 @@ const ItemListContainer = ({greeting}) =>{
           })
           setListaProd(arrayProductos)
         })
+        .catch(()=>{
+          console.log("Firebase no está funcionando")
+        })
         .finally(()=>{
           setLoading(false)
         })
