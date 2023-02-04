@@ -1,13 +1,18 @@
-#Adiestramiento Canino Jirok
 
-###Este proyecto involucra una página web de una Escuela de Adiestramiento. El mismo fue creado con React; combinando html, css y javascript.
-####En la página tenemos distintas secciones: 
-* Seminarios
-* Cursos
-* Accesorios
+Este proyecto fue ejecutado en Coderhouse,El mismo fue creado con React; combinando html, css y javascript.
+En la página tenemos distintas secciones de juegos distintos:
+-terror
+-aventura
+-guerra
 
 Dentro de ellas, figura un listado con los posibles elementos a comprar.
- Estos se pueden agregar al carrito, siempre y cuando se cuente con stock.
+ Estos se pueden agregar al carrito al entrar en detalle![gifDetalles](https://user-images.githubusercontent.com/109293914/216793424-1d20e658-3755-4d69-969e-efe473f4f98e.gif)
+
+ 
+ 
+ 
+ 
+ , siempre y cuando se cuente con stock.
   A su vez, pueden eliminarse, disminuir o aumentarse su cantidad, o inclusive vaciar el carrito. 
 Luego, al finalizar la compra, se solicitan los datos del usuario, y se le dará el ID de su compra.
 
