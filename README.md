@@ -17,15 +17,20 @@ Dentro de ellas, figura un listado con los posibles elementos a comprar.
  
  
  , siempre y cuando se cuente con stock.
-  A su vez, pueden eliminarse, disminuir o aumentarse su cantidad, o inclusive vaciar el carrito. 
+  A su vez, pueden eliminarse, disminuir o aumentarse su cantidad, o inclusive vaciar el carrito.
+  
+  
+  
+  ![gif3](https://user-images.githubusercontent.com/109293914/216793617-fb8cd004-4f09-4564-a42a-75f6b8ddc44f.gif)
+
+  
+  
+  
 Luego, al finalizar la compra, se solicitan los datos del usuario, y se le dará el ID de su compra.
 
-**Cabe destacar, el uso de Firebase (base de datos no relacional) para almacenar, no solo los productos publicados, sino también los datos de las ventas realizadas.**
+Cabe destacar, el uso de Firebase (base de datos no relacional) para almacenar, no solo los productos publicados, sino también los datos de las ventas realizadas.
 
->[Click aquí para ir al repositorio (en github) del proyecto](https://github.com/mirkomelfi/ecommerce-melfi.git)
 
 Para reproducirlo, puedes clonar dicho repositorio. Acto seguido, abrir la consola (GIT Bash) y ejecutar los comandos:
-* npm i
-* npm start
-
-Espero la información le haya sido de ayuda.
+..npm i
+..npm start
