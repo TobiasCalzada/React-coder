@@ -6,7 +6,11 @@ En la página tenemos distintas secciones de juegos distintos:
 -guerra
 
 Dentro de ellas, figura un listado con los posibles elementos a comprar.
- Estos se pueden agregar al carrito al entrar en detalle![gifDetalles](https://user-images.githubusercontent.com/109293914/216793424-1d20e658-3755-4d69-969e-efe473f4f98e.gif)
+ Estos se pueden agregar al carrito al entrar en detalle
+ 
+ 
+ ![gifDetalles](https://user-images.githubusercontent.com/109293914/216793486-248ce8af-4063-47bb-91c0-2fd87edf582b.gif)
+
 
  
  
