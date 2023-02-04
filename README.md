@@ -21,14 +21,18 @@ Dentro de ellas, figura un listado con los posibles elementos a comprar.
   
   
   
-  ![gif3](https://user-images.githubusercontent.com/109293914/216793617-fb8cd004-4f09-4564-a42a-75f6b8ddc44f.gif)
+  ![GIFsumar](https://user-images.githubusercontent.com/109293914/216793736-e58d3071-bc99-4c5b-8c57-35998d623804.gif)
 
-  
-  
-  
+
 Luego, al finalizar la compra, se solicitan los datos del usuario, y se le dará el ID de su compra.
 
 Cabe destacar, el uso de Firebase (base de datos no relacional) para almacenar, no solo los productos publicados, sino también los datos de las ventas realizadas.
+
+
+
+
+![GIFsumar](https://user-images.githubusercontent.com/109293914/216793761-d3b79c94-6965-4ce9-9d89-5efbc57045cf.gif)
+
 
 
 Para reproducirlo, puedes clonar dicho repositorio. Acto seguido, abrir la consola (GIT Bash) y ejecutar los comandos:
