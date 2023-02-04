@@ -1,0 +1,9 @@
+.logoImagen{
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url(/public/img/logo.jpg);
+    background-size:contain;
+    cursor: pointer;
+    margin: 20px 0px 0px 30px;
+}

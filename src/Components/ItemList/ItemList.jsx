@@ -1,5 +1,5 @@
 import {Item} from "../Item/Item"
-import "../Item/Item.css";
+
 
 const ItemList = ({listaProd})=>{
 

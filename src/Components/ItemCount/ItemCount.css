@@ -4,14 +4,40 @@ button{
 }
 
 .contenedorContador{
-    width: 300px;
-    height: 100px;
-
+    border: solid thin rgb(231, 206, 204);
+    border-radius: 15px;
+    padding: 12px 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    max-width: 480px;
 }
 
- .botonesContador button{
-    padding: 10px;
+.botonesContador{
+    display: flex;
+    flex-direction: row;
+}
+.botonesContador section{
+    padding: 0px 10px 0px 0px;
+    margin-left: 16px;
+}
+.botonesContador section button{
+    cursor: pointer;
+    width: 130px;
+    color: rgb(255, 253, 253);
+    font-size: 15px;
+    max-width: 160px;
+    background: linear-gradient(rgb(83, 83, 83),rgb(64, 63, 63));
+    border-radius:  4px; 
+    border: none;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.contador{
+    color: rgb(255, 255, 255);
 }

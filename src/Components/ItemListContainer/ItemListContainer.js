@@ -15,14 +15,14 @@ const ItemListContainer = ({greeting}) =>{
       setLoading(true)
         const coleccionProductos= collection(db,"productos")
         let q= coleccionProductos;
-        if (categoria==="cursos"){
-          q= query(coleccionProductos,where("categoria","==","cursos")) 
+        if (categoria==="Guerra"){
+          q= query(coleccionProductos,where("categoria","==","Guerra")) 
         }
-        else if (categoria==="seminarios"){
-          q= query(coleccionProductos,where("categoria","==","seminarios")) 
+        else if (categoria==="Aventura"){
+          q= query(coleccionProductos,where("categoria","==","Aventura")) 
         }
-        else if(categoria==="accesorios"){
-          q= query(coleccionProductos,where("categoria","==","accesorios")) 
+        else if(categoria==="Terror"){
+          q= query(coleccionProductos,where("categoria","==","Terror")) 
         }
         getDocs(q)
         .then((data)=>{
@@ -43,11 +43,11 @@ const ItemListContainer = ({greeting}) =>{
     },[categoria])
 
     return (
-      <div>
-        <h1 className="greeting">{greeting}</h1>
-        {loading ? <p>cargando...</p> : <ItemList listaProd={listaProd}/>}
+      <div className="contenedorDeGreeting">
+        <p className="greeting">{greeting}</p>
+        <div>{loading ? <p>cargando...</p> : <ItemList listaProd={listaProd}/>}</div>
       </div>
-   
+
     );
   }
   

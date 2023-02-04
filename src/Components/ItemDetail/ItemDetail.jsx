@@ -10,17 +10,19 @@ const ItemDetail = ({listaProd})=>{
     const {addItem}=useContext(Context);
 
     const onAdd= (contador)=>{
-       setAgregado(true);
-       addItem(listaProd,contador)
+        setAgregado(true);
+        addItem(listaProd,contador)
     }
 
     return (
         <div className="producto">
-            <h1>{listaProd.producto}</h1>
-            <img src={listaProd.imagen} alt="imagen del producto"/>
-            <p>{listaProd.descripcion}</p>
-            <h3>${listaProd.precio}</h3>
-            { !agregado ? <ItemCount stock={listaProd.stock} onAdd={onAdd}/> :  <><Link to="/cart"><button>Ver Carrito</button></Link> <Link to="/"><button>Seguir comprando</button></Link></>}
+            <h1 className="tituloDetalle">{listaProd.producto}</h1>
+            <div className="contenedorDetalle">
+                <img className="imgDetalle" src={listaProd.imagen} alt={"imagen de" + " " + listaProd.producto}/>
+            </div>
+            <p className="descripcionDetalle">{listaProd.descripcion}</p>
+            <h3 className="precioDetalle">${listaProd.precio}</h3>
+            { !agregado ? <ItemCount stock={listaProd.stock} onAdd={onAdd}/> :  <><Link to="/cart"><button className="botonesDeCompra">Ver Carrito</button></Link> <Link to="/"><button className="botonesDeCompra">Seguir comprando</button></Link></>}
         </div>
 
     )

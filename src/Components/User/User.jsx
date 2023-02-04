@@ -19,7 +19,7 @@ export const User = () =>{
     const handlerOnChange = (e)=>{
         setDatosComprador({...datosComprador, [e.target.name]:e.target.value})
     }
-   
+
     const enviarDatos = (e)=>{
         e.preventDefault();
         const coleccionVentas=collection(db,"ventas");
@@ -57,10 +57,12 @@ export const User = () =>{
         <> 
         {id&&
             <>
-                <h2> Su código de compra es: {idCompra}</h2>
-                <h2> Guardelo por si necesita hacer un reclamo </h2>
-                <h3>Muchas gracias por su compra!</h3>
-                <h3 className="advertenciaRoja">En 10 segundos esta página se restaurará...</h3>
+                <div className="fragment">
+                    <h2 className="alertMensaje"> Su código de compra es: {idCompra}</h2>
+                    <h2 className="alertMensaje"> Guardelo por si necesita hacer un reclamo </h2>
+                    <h3 className="alertMensaje">Muchas gracias por su compra!</h3>
+                    <h3 className="advertenciaRoja">En 10 segundos esta página se restaurará...</h3>
+                </div>
             </>
         }
 
@@ -74,6 +76,5 @@ export const User = () =>{
         </Fragment>}
 
         </>
-   
     );
 } 

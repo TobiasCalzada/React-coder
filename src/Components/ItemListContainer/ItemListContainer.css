@@ -1,5 +1,12 @@
+.contenedorDeGreeting{
+    background:linear-gradient(rgb(6, 6, 6), rgb(72, 71, 72));
+}
+
 .greeting{
     text-align: center;
+    width: 100%;
+    height: 100px;
+    color: rgb(239, 239, 239);
 }
 div{
     display: flex;

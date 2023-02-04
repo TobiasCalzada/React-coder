@@ -1,20 +1,59 @@
-header{
+/*Estilos de la nav*/
+.header{
+    display: flex;
+    justify-content:space-between;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url(https://i.pinimg.com/originals/33/9e/38/339e38262e7676b73cdf85ad2288ec89.jpg);
+    height: 125px;
+    max-width:1600px;
+    background-color: rgba(0, 0, 0, 0.362);
+}
+
+/*color navbar*/
+.containerNav{
+    width: 100%;
+}
+
+.navBar ul{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(152, 170, 170);
+    justify-content: space-evenly;
+    list-style: none;
+    padding-top: 20px;
+    width: 600px;
+    margin-left:400px;
+    margin-top: 40px;
 }
 
-a{
-    font-size: 20px;
-    padding: 15px;
-    color: blue;
+.navBar ul li{
+    position: relative;
+    margin-right:100px;
+}
+.navBar ul li .Link{
+    display: inline-block;
     text-decoration: none;
-    font-style: oblique;
-    
+    color: rgb(255, 255, 255);
+    font-size:18px;
+    text-shadow: 2px 1px rgb(70, 68, 68);
 }
-img{
-    width: 100px;
-    height:100px;
 
+.navBar ul li::before{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background:  rgb(158, 110, 246);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.4s  ease-out;
 }
+
+.navBar ul li:hover::before{
+    width: 100%;
+}
+
+.navBar ul li:hover{
+    scale: 1.1;
+}
+
