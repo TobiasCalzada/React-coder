@@ -1,10 +1,4 @@
-#Adiestramiento Canino Jirok
 
-###Este proyecto involucra una página web de una Escuela de Adiestramiento. El mismo fue creado con React; combinando html, css y javascript.
-####En la página tenemos distintas secciones: 
-* Seminarios
-* Cursos
-* Accesorios
 
 Dentro de ellas, figura un listado con los posibles elementos a comprar.
  Estos se pueden agregar al carrito, siempre y cuando se cuente con stock.
