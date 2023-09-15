@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React-coder/static/css/main.4fe7fd1a.css",
+    "main.js": "/React-coder/static/js/main.f77eef13.js",
+    "static/media/logo.jpg": "/React-coder/static/media/logo.8b757ae4e1d1a99cbfb4.jpg",
+    "index.html": "/React-coder/index.html",
+    "main.4fe7fd1a.css.map": "/React-coder/static/css/main.4fe7fd1a.css.map",
+    "main.f77eef13.js.map": "/React-coder/static/js/main.f77eef13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fe7fd1a.css",
+    "static/js/main.f77eef13.js"
+  ]
+}
