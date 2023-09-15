@@ -1,9 +1,9 @@
 
-Este proyecto fue ejecutado en Coderhouse,El mismo fue creado con React; combinando html, css y javascript.
-En la página tenemos distintas secciones de juegos distintos:
--terror
--aventura
--guerra
+###Este proyecto involucra una página web de una Escuela de Adiestramiento. El mismo fue creado con React; combinando html, css y javascript.
+####En la página tenemos distintas secciones: 
+* Seminarios
+* Cursos
+* Accesorios
 
 Dentro de ellas, figura un listado con los posibles elementos a comprar.
  Estos se pueden agregar al carrito al entrar en detalle
